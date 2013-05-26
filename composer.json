@@ -1,0 +1,15 @@
+{
+    "name": "facebook/libphutil",
+    "type": "library",
+    "description": "libphutil is a collection of utility classes for PHP.",
+    "version": "1.0-alpha",
+    "minimum-stability": "dev",
+    "homepage": "https://github.com/facebook/libphutil",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Evan Priestley",
+            "email": "mail@example.com"
+        }
+    ]
+}
