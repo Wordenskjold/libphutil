@@ -380,6 +380,30 @@ function msort(array $list, $method) {
 
 
 /**
+ * Sort a list of objects by the value of some property. This method is identical to
+ * @{function:msort}, but uses a property instead of a function to sort the list.
+ *
+ * @param   list    List of objects to sort by some property value.
+ * @param   string  Property to access on each object; the return values
+ *                  will be used to sort the list.
+ * @return  list    Arrays ordered by the property values.
+ * @group   util
+ */
+function psort(array $list, $property) {
+  $surrogate = ppull($list, $property);
+
+  asort($surrogate);
+
+  $result = array();
+  foreach ($surrogate as $key => $value) {
+    $result[$key] = $list[$key];
+  }
+
+  return $result;
+}
+
+
+/**
  * Sort a list of arrays by the value of some index. This method is identical to
  * @{function:msort}, but operates on a list of arrays instead of a list of
  * objects.
